@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/totalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDEDED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="200dp"
+                android:layout_height="115dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/logo_nofondo" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oswald"
+            android:text="Compra sin límites"
+            android:textColor="#000000"
+            android:textSize="27sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/emailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="40dp"
+            android:text="Correo electrónico"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailLabel"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/email"
+            app:srcCompat="@drawable/baseline_email_24" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailLabel"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="#5E5858" />
+
+        <TextView
+            android:id="@+id/passLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+            android:text="Contraseña"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passLabel"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/password"
+            app:srcCompat="@drawable/baseline_lock_24" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passLabel"
+            android:layout_centerInParent="true"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="#5E5858" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:width="250dp"
+            android:backgroundTint="@color/orange"
+            android:text="INICIAR SESIÓN"
+            android:textStyle="bold" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:id="@+id/createAccountButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/googleButton"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:width="250dp"
+            android:backgroundTint="@color/orange"
+            android:text="CREAR CUENTA"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/passRecovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/createAccountButton"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:fontFamily="sans-serif"
+            android:minHeight="48dp"
+            android:text="Olvidé mi contraseña"
+            android:textColor="#2B2A2A"
+            android:textSize="20dp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

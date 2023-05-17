@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserConfFragment">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EDEDED"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/oswald"
+                    android:text="Easyway"
+                    android:textColor="#000000"
+                    android:textSize="42sp" />
+
+                <ImageButton
+                    android:id="@+id/orderList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Ver historial de pedidos"
+                    app:srcCompat="@drawable/baseline_list_alt_24" />
+
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Volver atras"
+                    app:srcCompat="@drawable/baseline_arrow_back_24" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/contactConf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/oswald"
+                android:text="Contacto"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/contactConf"
+                android:layout_centerHorizontal="true"
+                android:background="#434343" />
+
+            <TextView
+                android:id="@+id/nameLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_toStartOf="@id/contactName"
+                android:layout_below="@id/divider2"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:text="Nombre" />
+
+            <EditText
+                android:id="@+id/contactName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/surnameLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_toStartOf="@id/contactSurname"
+                android:layout_below="@id/nameLbl"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="10dp"
+                android:text="Apellidos" />
+
+            <EditText
+                android:id="@+id/contactSurname"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/phoneLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_toStartOf="@id/contactPhone"
+                android:layout_below="@id/surnameLbl"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="10dp"
+                android:text="Teléfono" />
+
+            <EditText
+                android:id="@+id/contactPhone"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactSurname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/emailLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_toStartOf="@id/contactMail"
+                android:layout_below="@id/phoneLbl"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="10dp"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/contactMail"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactPhone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border"
+                android:focusable="false"
+                android:inputType="none"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:ignore="SpeakableTextPresentCheck" />
+            
+            <Button
+                android:id="@+id/saveChanges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GUARDAR CAMBIOS"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentBottom="true"
+                android:width="250dp"
+                android:backgroundTint="@color/orange"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+</FrameLayout>

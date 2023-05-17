@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ComplexProductView"
+    android:background="@color/layoutGrey">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/oswald"
+                android:text="Easyway"
+                android:textColor="#000000"
+                android:textSize="42sp" />
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Volver para atras"
+                app:srcCompat="@drawable/baseline_arrow_back_24" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:textColor="@color/black"
+            android:fontFamily="@font/oswald"
+            android:textSize="40sp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="Nombre" />
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/productName"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/producto" />
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productImage"
+            android:textColor="@color/black"
+            android:fontFamily="@font/oswald"
+            android:background="@color/invisible"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/productDescriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productPrice"
+            android:textColor="@color/black"
+            android:fontFamily="@font/oswald"
+            android:background="@color/invisible"
+            android:textSize="40sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="Descripción" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/productDescriptionTitle"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <EditText
+            android:id="@+id/productDescription"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider4"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:layout_above="@id/addToCartBtn"
+            android:textColorHint="@color/invisible"
+            android:editable="false"
+            android:cursorVisible="false"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/addToCartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:width="200dp"
+            android:backgroundTint="@color/orange"
+            android:text="AÑADIR AL CARRITO"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
+
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/layoutGrey"
+    tools:context=".PaymentLayout">
+
+    <RelativeLayout
+        android:id="@+id/totalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Ver historial de pedidos"
+                app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/oswald"
+                android:text="Easyway"
+                android:textColor="#000000"
+                android:textSize="42sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/oswald"
+            android:text="Finalizar compra"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_below="@id/pageTitle"
+            android:layout_centerHorizontal="true"
+            android:background="#434343" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="formulario"
+            android:layout_below="@id/divider">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/totalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textSize="27sp" />
+
+                <TextView
+                    android:id="@+id/addressLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@id/totalPrice"
+                    android:layout_centerHorizontal="true"
+                    android:text="Direccion de envio"
+                    android:textColor="@color/black"
+                    android:textSize="27sp" />
+
+                <EditText
+                    android:id="@+id/countryName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@id/addressLabel"
+                    android:ems="10"
+                    android:hint="País"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/provinceName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@id/addressLabel"
+                    android:layout_toEndOf="@id/countryName"
+                    android:ems="10"
+                    android:textColorHint="@color/black"
+                    android:hint="Provincia"
+                    android:textColor="@color/black"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/cityName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@id/countryName"
+                    android:ems="10"
+                    android:hint="Ciudad"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/streetName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/provinceName"
+                    android:layout_toEndOf="@id/cityName"
+                    android:background="@drawable/border"
+                    android:ems="10"
+                    android:hint="Calle"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp" />
+
+                <TextView
+                    android:id="@+id/contactLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/cityName"
+                    android:layout_centerHorizontal="true"
+                    android:text="Contacto"
+                    android:textColor="@color/black"
+                    android:textSize="27sp" />
+
+                <EditText
+                    android:id="@+id/contactName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@id/contactLabel"
+                    android:ems="10"
+                    android:hint="Nombre"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/contactPhone"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/contactLabel"
+                    android:layout_toEndOf="@id/contactName"
+                    android:background="@drawable/border"
+                    android:ems="10"
+                    android:hint="Teléfono"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="phone"
+                    android:minHeight="48dp" />
+
+                <TextView
+                    android:id="@+id/paymentLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/contactName"
+                    android:layout_centerHorizontal="true"
+                    android:text="Pago"
+                    android:textColor="@color/black"
+                    android:textSize="27sp" />
+
+                <EditText
+                    android:id="@+id/titular"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@id/paymentLabel"
+                    android:ems="10"
+                    android:hint="Titular"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/cvv"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@id/paymentLabel"
+                    android:layout_toEndOf="@id/countryName"
+                    android:ems="10"
+                    android:hint="CVV"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="number"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/cardNumber"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/border"
+                    android:layout_below="@id/titular"
+                    android:ems="10"
+                    android:hint="Número tarjeta"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="number"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/caducidad"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/cvv"
+                    android:layout_toEndOf="@id/cityName"
+                    android:background="@drawable/border"
+                    android:ems="10"
+                    android:hint="Fecha de caducidad"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="date"
+                    android:minHeight="48dp" />
+
+                <Button
+                    android:id="@+id/payButton"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="PAGAR"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/orange"
+                    android:layout_below="@id/cardNumber"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
